@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="1、npm全局部署sass1终端操作:npm i -g sass 2、配置sass1终端操作:sass --watch scss文件路径 存储路径 3、vscode插件使用123456789101112vscode download &quot;live sass compiler&quot;创建xxx.scssvscode点击左下角齿轮点击设置搜索live sass compiler插件点击设置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sass 01 基本操作-安装及基本使用简介">
+<meta property="og:url" content="http://yoursite.com/2020/08/30/sass-init/index.html">
+<meta property="og:site_name" content="HONGLEI">
+<meta property="og:description" content="1、npm全局部署sass1终端操作:npm i -g sass 2、配置sass1终端操作:sass --watch scss文件路径 存储路径 3、vscode插件使用123456789101112vscode download &quot;live sass compiler&quot;创建xxx.scssvscode点击左下角齿轮点击设置搜索live sass compiler插件点击设置">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-08-30T03:30:00.000Z">
+<meta property="article:modified_time" content="2020-08-30T05:13:49.577Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>sass 01 基本操作-安装及基本使用简介</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/projects_url">项目</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2020/08/30/js%E5%AE%9A%E6%97%B6%E5%99%A8/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/08/30/sass-init/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://yoursite.com/2020/08/30/sass-init/&text=sass 01 基本操作-安装及基本使用简介"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/08/30/sass-init/&title=sass 01 基本操作-安装及基本使用简介"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/08/30/sass-init/&is_video=false&description=sass 01 基本操作-安装及基本使用简介"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=sass 01 基本操作-安装及基本使用简介&body=Check out this article: http://yoursite.com/2020/08/30/sass-init/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://yoursite.com/2020/08/30/sass-init/&title=sass 01 基本操作-安装及基本使用简介"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://yoursite.com/2020/08/30/sass-init/&title=sass 01 基本操作-安装及基本使用简介"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/08/30/sass-init/&title=sass 01 基本操作-安装及基本使用简介"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://yoursite.com/2020/08/30/sass-init/&title=sass 01 基本操作-安装及基本使用简介"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/08/30/sass-init/&name=sass 01 基本操作-安装及基本使用简介&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://yoursite.com/2020/08/30/sass-init/&t=sass 01 基本操作-安装及基本使用简介"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81npm%E5%85%A8%E5%B1%80%E9%83%A8%E7%BD%B2sass"><span class="toc-number">1.</span> <span class="toc-text">1、npm全局部署sass</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E9%85%8D%E7%BD%AEsass"><span class="toc-number">2.</span> <span class="toc-text">2、配置sass</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81vscode%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">3、vscode插件使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E8%AE%BE%E7%BD%AE%E5%8F%98%E9%87%8F"><span class="toc-number">4.</span> <span class="toc-text">4、设置变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81sass%E5%BC%95%E5%85%A5%E5%A4%96%E9%83%A8sass%E6%96%87%E4%BB%B6"><span class="toc-number">5.</span> <span class="toc-text">5、sass引入外部sass文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81sass%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">6.</span> <span class="toc-text">6、sass调用函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#07%E3%80%81sass%E5%BE%AA%E7%8E%AF"><span class="toc-number">7.</span> <span class="toc-text">07、sass循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E9%9D%A2%E7%9A%84%E4%BB%A3%E7%A0%81%E6%8C%89%E9%A1%BA%E5%BA%8F%E6%95%B2%E6%89%93%E5%8F%AF%E5%BF%AB%E9%80%9F%E7%90%86%E8%A7%A3sass"><span class="toc-number">8.</span> <span class="toc-text">下面的代码按顺序敲打可快速理解sass</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF"><span class="toc-number">9.</span> <span class="toc-text">模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#style-scss"><span class="toc-number">10.</span> <span class="toc-text">style.scss</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#config-scss"><span class="toc-number">11.</span> <span class="toc-text">_config.scss</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#utilities-scss"><span class="toc-number">12.</span> <span class="toc-text">_utilities.scss</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#button-scss"><span class="toc-number">13.</span> <span class="toc-text">_button.scss</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mobile-scss"><span class="toc-number">14.</span> <span class="toc-text">_mobile.scss</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        sass 01 基本操作-安装及基本使用简介
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">HONGLEI</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-08-30T03:30:00.000Z" itemprop="datePublished">2020-08-30</time>
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="1、npm全局部署sass"><a href="#1、npm全局部署sass" class="headerlink" title="1、npm全局部署sass"></a>1、npm全局部署sass</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">终端操作:npm i -g sass</span><br></pre></td></tr></table></figure>
+<h2 id="2、配置sass"><a href="#2、配置sass" class="headerlink" title="2、配置sass"></a>2、配置sass</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">终端操作:sass --watch scss文件路径 存储路径</span><br></pre></td></tr></table></figure>
+<h2 id="3、vscode插件使用"><a href="#3、vscode插件使用" class="headerlink" title="3、vscode插件使用"></a>3、vscode插件使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">vscode download &quot;live sass compiler&quot;</span><br><span class="line">创建xxx.scss</span><br><span class="line">vscode点击左下角齿轮</span><br><span class="line">点击设置</span><br><span class="line">搜索live sass compiler插件</span><br><span class="line">点击设置Settings:Formats下setting.json</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F; &quot;format&quot;: &quot;expanded&quot;, &#x2F;&#x2F;压缩</span><br><span class="line">    &quot;format&quot;: &quot;compressed&quot;, &#x2F;&#x2F;未压缩</span><br><span class="line">    &quot;extensionName&quot;: &quot;.css&quot;,    &#x2F;&#x2F;设置文件类型</span><br><span class="line">    &quot;savePath&quot;: &quot;&#x2F;css&quot;  &#x2F;&#x2F;设置文件当前文件夹存储路径</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="4、设置变量"><a href="#4、设置变量" class="headerlink" title="4、设置变量"></a>4、设置变量</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">如:$变量名: 变量属性(可以为颜色字体样式等)</span><br><span class="line">使用方式如:color: $变量名;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5、sass引入外部sass文件"><a href="#5、sass引入外部sass文件" class="headerlink" title="5、sass引入外部sass文件"></a>5、sass引入外部sass文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">如:</span><br><span class="line">外部sass文件:_config.scss</span><br><span class="line">主sass文件:index.scss</span><br><span class="line">引入方式 @import &#39;_config&#39;;</span><br><span class="line">前面_下划线作用 声明文件为外部文件——&gt;不会再次生成新的.css文件</span><br></pre></td></tr></table></figure>
+
+<h2 id="6、sass调用函数"><a href="#6、sass调用函数" class="headerlink" title="6、sass调用函数"></a>6、sass调用函数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">如:</span><br><span class="line">$primary-color: red;</span><br><span class="line">函数方法</span><br><span class="line">@function set-text-color($color)&#123;</span><br><span class="line">    @if(lightness($color)&gt;70)&#123;</span><br><span class="line">        @return #333;</span><br><span class="line">    &#125;@else&#123;</span><br><span class="line">        @return #fff</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">@mixin set-background($color)&#123;</span><br><span class="line">    background-color: $color;</span><br><span class="line">    color: set-text-color($color);</span><br><span class="line">&#125;</span><br><span class="line">调用方式</span><br><span class="line">@include set-background($primary-color);</span><br><span class="line">@include set-background(lighten($primary-color,10%));</span><br></pre></td></tr></table></figure>
+
+<h2 id="07、sass循环"><a href="#07、sass循环" class="headerlink" title="07、sass循环"></a>07、sass循环</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;m-2&quot;&gt;asd&lt;&#x2F;div&gt;</span><br><span class="line">$spaceamounts:(1,2,3,4,5);</span><br><span class="line">@each $space in $spaceamounts &#123;</span><br><span class="line">    .m-#&#123;$space&#125;&#123;</span><br><span class="line">        margin: #&#123;$space&#125;rem;</span><br><span class="line">    &#125;</span><br><span class="line">    .my-#&#123;$space&#125;&#123;</span><br><span class="line">        margin: #&#123;$space&#125;rem 0;</span><br><span class="line">    &#125;</span><br><span class="line">    .p-#&#123;$space&#125;&#123;</span><br><span class="line">        padding: #&#123;$space&#125;rem 0;</span><br><span class="line">    &#125;</span><br><span class="line">    .py-#&#123;$space&#125;&#123;</span><br><span class="line">        padding: #&#123;$space&#125;rem 0;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="下面的代码按顺序敲打可快速理解sass"><a href="#下面的代码按顺序敲打可快速理解sass" class="headerlink" title="下面的代码按顺序敲打可快速理解sass"></a>下面的代码按顺序敲打可快速理解sass</h2><h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;.&#x2F;css&#x2F;style.css&quot;&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;header class&#x3D;&quot;showcase&quot;&gt;</span><br><span class="line">        &lt;div class&#x3D;&quot;container&quot;&gt;</span><br><span class="line">            &lt;nav&gt;</span><br><span class="line">                &lt;h1 class&#x3D;&quot;logo&quot;&gt;hongli&lt;&#x2F;h1&gt;</span><br><span class="line">                &lt;ul&gt;</span><br><span class="line">                    &lt;li&gt;</span><br><span class="line">                        &lt;a href&#x3D;&quot;#&quot;&gt;test&lt;&#x2F;a&gt;</span><br><span class="line">                    &lt;&#x2F;li&gt;</span><br><span class="line">                    &lt;li&gt;</span><br><span class="line">                        &lt;a href&#x3D;&quot;#&quot;&gt;test&lt;&#x2F;a&gt;</span><br><span class="line">                    &lt;&#x2F;li&gt;</span><br><span class="line">                    &lt;li&gt;</span><br><span class="line">                        &lt;a href&#x3D;&quot;#&quot;&gt;test&lt;&#x2F;a&gt;</span><br><span class="line">                    &lt;&#x2F;li&gt;</span><br><span class="line">                &lt;&#x2F;ul&gt;</span><br><span class="line">            &lt;&#x2F;nav&gt;</span><br><span class="line">            &lt;div class&#x3D;&quot;showcase-content&quot;&gt;</span><br><span class="line">                &lt;div&gt;</span><br><span class="line">                    &lt;p class&#x3D;&quot;my-1&quot;&gt;</span><br><span class="line">                        ASDLMLZC</span><br><span class="line">                        ASDJKLZMCMKLJASLDLLKASDKL</span><br><span class="line">                        ZCNLMALSDLMKLZCLMA;;D</span><br><span class="line">                        ASDNLXCIOQJWKLELASD</span><br><span class="line">                        ASDNM,ZNCADKLQW</span><br><span class="line">                    &lt;&#x2F;p&gt;</span><br><span class="line">                    &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;btn-primary&quot;&gt;LOGIN&lt;&#x2F;a&gt;</span><br><span class="line">                    &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;btn-secindary&quot;&gt;RESTIER&lt;&#x2F;a&gt;</span><br><span class="line">                &lt;&#x2F;div&gt;</span><br><span class="line">                &lt;img src&#x3D;&quot;..&#x2F;test&#x2F;images&#x2F;focus3.jpg&quot; alt&#x3D;&quot;&quot;&gt;</span><br><span class="line">            &lt;&#x2F;div&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;header&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="style-scss"><a href="#style-scss" class="headerlink" title="style.scss"></a>style.scss</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">@import &#39;_config&#39;;</span><br><span class="line">@import &#39;_utilities&#39;;</span><br><span class="line">@import &#39;_button&#39;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">*&#123;</span><br><span class="line">    margin: 0;</span><br><span class="line">    padding: 0;</span><br><span class="line">    box-sizing: border-box;</span><br><span class="line">&#125;</span><br><span class="line">body&#123;</span><br><span class="line">    background-color:$light-color;</span><br><span class="line">    font-family: $font-stack;</span><br><span class="line">    line-height: 1.6;</span><br><span class="line">&#125;</span><br><span class="line">img&#123;</span><br><span class="line">    width: 100%;</span><br><span class="line">&#125;</span><br><span class="line">.showcase&#123;</span><br><span class="line">    @include set-background($primary-color);</span><br><span class="line">    &#x2F;&#x2F; background-color: $primary-color;</span><br><span class="line">    &#x2F;&#x2F; &#x2F;&#x2F; color: #fff;</span><br><span class="line">    &#x2F;&#x2F; color: set-text-color($primary-color);</span><br><span class="line">    height: 600px;</span><br><span class="line">    nav&#123;</span><br><span class="line">        display: flex;</span><br><span class="line">        align-items: center;</span><br><span class="line">        justify-content: space-between;</span><br><span class="line">        ul&#123;</span><br><span class="line">            display: flex;</span><br><span class="line">            list-style: none;</span><br><span class="line">        &#125;</span><br><span class="line">        li&#123;</span><br><span class="line">            padding: 15px;</span><br><span class="line">        &#125;</span><br><span class="line">        a&#123;</span><br><span class="line">            color: set-text-color($primary-color);</span><br><span class="line">        &#125;</span><br><span class="line">        a:hover&#123;</span><br><span class="line">            color: $primary-color;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    &amp;-content&#123;</span><br><span class="line">        height: 100%;</span><br><span class="line">        display: flex;</span><br><span class="line">        align-items: center;</span><br><span class="line">        justify-content: center;</span><br><span class="line">        margin-top:30px;</span><br><span class="line">        img&#123;</span><br><span class="line">            width: 50%;</span><br><span class="line">        &#125;</span><br><span class="line">        h1&#123;</span><br><span class="line">            font-size: 50px;</span><br><span class="line">            line-height: 1.2;</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;&#x2F; p&#123;</span><br><span class="line">        &#x2F;&#x2F;     margin: 20px 0;</span><br><span class="line">        &#x2F;&#x2F; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@import &#39;_mobile&#39;;</span><br></pre></td></tr></table></figure>
+<h2 id="config-scss"><a href="#config-scss" class="headerlink" title="_config.scss"></a>_config.scss</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">$light-color:#f4f4f4;</span><br><span class="line">$font-stack:Arial, Helvetica, sans-serif;</span><br><span class="line">$primary-color:#0e6cff;</span><br><span class="line">&#x2F;&#x2F; $primary-color:#e0ffff;</span><br><span class="line">$secondary-color:#ff8700;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;根据本届色变化来设置字体颜色</span><br><span class="line">@function set-text-color($color)&#123;</span><br><span class="line">    @if(lightness($color)&gt;70)&#123;</span><br><span class="line">        @return #333;</span><br><span class="line">    &#125;@else&#123;</span><br><span class="line">        @return #fff</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;混合背景色和字体色</span><br><span class="line">@mixin set-background($color)&#123;</span><br><span class="line">    background-color: $color;</span><br><span class="line">    color: set-text-color($color);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="utilities-scss"><a href="#utilities-scss" class="headerlink" title="_utilities.scss"></a>_utilities.scss</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">.container&#123;</span><br><span class="line">    max-width: 1100px;</span><br><span class="line">    padding: 0 30px;</span><br><span class="line">    margin: 0 auto;</span><br><span class="line">    overflow: auto;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; margin&amp;padding</span><br><span class="line">$spaceamounts:(1,2,3,4,5);</span><br><span class="line">@each $space in $spaceamounts &#123;</span><br><span class="line">    .m-#&#123;$space&#125;&#123;</span><br><span class="line">        margin: #&#123;$space&#125;rem;</span><br><span class="line">    &#125;</span><br><span class="line">    .my-#&#123;$space&#125;&#123;</span><br><span class="line">        margin: #&#123;$space&#125;rem 0;</span><br><span class="line">    &#125;</span><br><span class="line">    .p-#&#123;$space&#125;&#123;</span><br><span class="line">        padding: #&#123;$space&#125;rem 0;</span><br><span class="line">    &#125;</span><br><span class="line">    .py-#&#123;$space&#125;&#123;</span><br><span class="line">        padding: #&#123;$space&#125;rem 0;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="button-scss"><a href="#button-scss" class="headerlink" title="_button.scss"></a>_button.scss</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">%btn &#123;</span><br><span class="line">    display: inline-block;</span><br><span class="line">    border-radius:5px;</span><br><span class="line">    padding: 8px 20px;</span><br><span class="line">    margin: 3px;</span><br><span class="line">    &amp;:hover&#123;</span><br><span class="line">        transform: scale(.98);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; lighten降淡颜色</span><br><span class="line">.btn-primary&#123;</span><br><span class="line">    @extend %btn;</span><br><span class="line">    &#x2F;&#x2F; background-color: lighten($primary-color, 10%);</span><br><span class="line">    @include set-background(lighten($primary-color,10%));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.btn-secindary&#123;</span><br><span class="line">    @extend %btn;</span><br><span class="line">    &#x2F;&#x2F; background-color: $secondary-color;</span><br><span class="line">    @include set-background(lighten( $secondary-color,10%));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="mobile-scss"><a href="#mobile-scss" class="headerlink" title="_mobile.scss"></a>_mobile.scss</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@media(max-width:700px)&#123;</span><br><span class="line">    .showcase&#123;</span><br><span class="line">        height: 400px;</span><br><span class="line">        &amp;-content&#123;</span><br><span class="line">            text-align: center;</span><br><span class="line">            img&#123;</span><br><span class="line">                display: none;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/projects_url">项目</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81npm%E5%85%A8%E5%B1%80%E9%83%A8%E7%BD%B2sass"><span class="toc-number">1.</span> <span class="toc-text">1、npm全局部署sass</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E9%85%8D%E7%BD%AEsass"><span class="toc-number">2.</span> <span class="toc-text">2、配置sass</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81vscode%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">3、vscode插件使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E8%AE%BE%E7%BD%AE%E5%8F%98%E9%87%8F"><span class="toc-number">4.</span> <span class="toc-text">4、设置变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81sass%E5%BC%95%E5%85%A5%E5%A4%96%E9%83%A8sass%E6%96%87%E4%BB%B6"><span class="toc-number">5.</span> <span class="toc-text">5、sass引入外部sass文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81sass%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">6.</span> <span class="toc-text">6、sass调用函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#07%E3%80%81sass%E5%BE%AA%E7%8E%AF"><span class="toc-number">7.</span> <span class="toc-text">07、sass循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E9%9D%A2%E7%9A%84%E4%BB%A3%E7%A0%81%E6%8C%89%E9%A1%BA%E5%BA%8F%E6%95%B2%E6%89%93%E5%8F%AF%E5%BF%AB%E9%80%9F%E7%90%86%E8%A7%A3sass"><span class="toc-number">8.</span> <span class="toc-text">下面的代码按顺序敲打可快速理解sass</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF"><span class="toc-number">9.</span> <span class="toc-text">模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#style-scss"><span class="toc-number">10.</span> <span class="toc-text">style.scss</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#config-scss"><span class="toc-number">11.</span> <span class="toc-text">_config.scss</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#utilities-scss"><span class="toc-number">12.</span> <span class="toc-text">_utilities.scss</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#button-scss"><span class="toc-number">13.</span> <span class="toc-text">_button.scss</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mobile-scss"><span class="toc-number">14.</span> <span class="toc-text">_mobile.scss</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/08/30/sass-init/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://yoursite.com/2020/08/30/sass-init/&text=sass 01 基本操作-安装及基本使用简介"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/08/30/sass-init/&title=sass 01 基本操作-安装及基本使用简介"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/08/30/sass-init/&is_video=false&description=sass 01 基本操作-安装及基本使用简介"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=sass 01 基本操作-安装及基本使用简介&body=Check out this article: http://yoursite.com/2020/08/30/sass-init/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://yoursite.com/2020/08/30/sass-init/&title=sass 01 基本操作-安装及基本使用简介"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://yoursite.com/2020/08/30/sass-init/&title=sass 01 基本操作-安装及基本使用简介"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/08/30/sass-init/&title=sass 01 基本操作-安装及基本使用简介"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://yoursite.com/2020/08/30/sass-init/&title=sass 01 基本操作-安装及基本使用简介"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/08/30/sass-init/&name=sass 01 基本操作-安装及基本使用简介&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://yoursite.com/2020/08/30/sass-init/&t=sass 01 基本操作-安装及基本使用简介"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2020
+    John Doe
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/projects_url">项目</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
